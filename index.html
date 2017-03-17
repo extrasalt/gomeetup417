@@ -42,31 +42,73 @@
 				</section>
 
 				<section>
+					<h2>The Why.</h2>
+				</section>
+
+				<section>
+					<img src="images/old.png">
+				</section>
+
+				<section>
+					<img src="images/new.png">
+				</section>
+
+
+				<section>
+					Go fixed the top layers.
+				</section>
+
+				<section>
 					<img src="images/docker.png">
+				</section>
+
+
+				<section>
+					...We have few more layers 
+				</section>
+
+				<section>
+					How do you deploy a go app on the cloud?
+				</section>
+
+				<section>
+					<ul>
+						<li>Compile your binary</li>
+						<li>Create a dockerfile</li>
+						<li>Add a base OS</li>
+						<li>Add your binary</li>
+						<li>Chmod it</li>
+						<li>Set it as entrypoint</li>
+						<li>Make an image with the dockerfile</li>
+						<li>Upload the image to a registry</li>
+						<li>Pull the image on your nodes and run</li>
+					</ul>
 				</section>
 
 				<section>
 					<h4>Linux containers</h4>
 					<ul>
 						<li>Cgroups and namespaces</li>
-						<li>Application containers vs Machine containers</li>
+						<li>Abstraction of a machine</li>
 						<li>Shipping your machine</li>
 						<li>Communication only through ports</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>What is orchestration?</h3>
-					<ul>
-						<li>Manage resources.</li>
-						<li>Schedule tasks</li>
-						<li>Monitoring</li>
-						<li>Managing the tasks</li>
-					</ul>
+					<img src="images/kube.png" width="200px" height="200px">
 				</section>
 
+				
+
 				<section>
-					<img src="images/kube.png" width="200px" height="200px">
+					<h3>Privitives</h3>
+					<ul>
+						<li>Nodes</li>
+						<li>Namespaces</li>
+						<li>Service</li>
+						<li>Pods</li>
+					</ul>
 				</section>
 
 				<section>
@@ -75,16 +117,6 @@ for tasks... it’s not possible to
 refer to arbitrary subsets of a job, which leads to problems
 like inflexible semantics for rolling updates and job resizing.
 					<small>Large-scale cluster management at Google with Borg, Google Inc.</small>
-				</section>
-
-				<section>
-					<h3>Privitives</h3>
-					<ul>
-						<li>Pods</li>
-						<li>Nodes</li>
-						<li>Namespaces</li>
-						<li>Service</li>
-					</ul>
 				</section>
 
 				<section>
@@ -124,12 +156,21 @@ We must treat the datacenter itself as one massive warehouse-scale computer (WSC
 				</section>
 
 				<section>
-					Kubernetes is the kernel of the datacenter
+					Running kubernetes on VMs is wasteful
 				</section>
 
 				<section>
-					Running kubernetes on VMs is wasteful
+					Kubernetes is the kernel of the datacenter
+					<small>You don't have to take my word for it</small>
 				</section>
+
+				<section>
+					The master is the kernel of a distributed system.
+Borgmaster was originally designed as a monolithic system, but over time, it became more of a kernel sitting at the heart of an ecosystem of services that cooperate to manage user jobs.
+				<small>Large-scale cluster management at Google with Borg, Google Inc.</small>
+				</section>
+
+
 
 				<section data-background="#e74c3c">
 					<p id="podder">Podder</p>
@@ -138,15 +179,11 @@ We must treat the datacenter itself as one massive warehouse-scale computer (WSC
 
 				<section>
 					<ul>
+						<li>Userspace for the system built with kubernetes as the kernel</li>
 						<li>Can deploy self-contained golang binaries</li>
 						<li>By just drag dropping</li>
-						<li>It's multi-tentant</li>
+						<li>It's multi-tenant</li>
 					</ul>
-				</section>
-
-				<section>
-					<h1>Demo time*</h1>
-					<small>*if God wills it.</small> 
 				</section>
 
 				<section>
