@@ -30,7 +30,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="#e74c3c">
+				<section>
+					<img src="images/gopher.jpg">
 					<p>Building a Baremetal Go PaaS with Kubernetes</p>
 					<small>Chennai Golang Meetup: March 2017</small>
 				</section>
@@ -42,7 +43,7 @@
 				</section>
 
 				<section>
-					<h2>The Why.</h2>
+					<h2>Pre-2013</h2>
 				</section>
 
 				<section>
@@ -67,11 +68,9 @@
 					...We have few more layers 
 				</section>
 
-				<section>
-					How do you deploy a go app on the cloud?
-				</section>
 
 				<section>
+					<h4>How do you deploy a go app on the cloud?</h4>
 					<ul>
 						<li>Compile your binary</li>
 						<li>Create a dockerfile</li>
@@ -86,12 +85,26 @@
 				</section>
 
 				<section>
+					Running Containers on VMs is wasteful
+				</section>
+				
+				<section>
+					We also question the practice of deploying containers inside VMs, since this imposes the performance overheads of VMs while giving no benefit compared to deploying containers directly on non-virtualized Linux.
+					<small>An Updated Performance Comparison of Virtual Machines and Linux Containers - IBM, 2014</small>
+				</section>
+
+				<section>
+					<img src="images/dockerperf.png" width="50%" height="50%">
+				</section>
+
+				<section>
 					<h4>Linux containers</h4>
 					<ul>
 						<li>Cgroups and namespaces</li>
 						<li>Abstraction of a machine</li>
 						<li>Shipping your machine</li>
 						<li>Communication only through ports</li>
+						<li>Stateless (No process migration)</li>
 					</ul>
 				</section>
 
@@ -111,13 +124,13 @@
 					</ul>
 				</section>
 
-				<section>
+				<!-- <section>
 						Jobs are restrictive as the only grouping mechanism
 for tasks... it’s not possible to
 refer to arbitrary subsets of a job, which leads to problems
 like inflexible semantics for rolling updates and job resizing.
 					<small>Large-scale cluster management at Google with Borg, Google Inc.</small>
-				</section>
+				</section> -->
 
 				<section>
 					<h3>Higher level constructs</h3>
@@ -152,12 +165,9 @@ like inflexible semantics for rolling updates and job resizing.
 
 				<section>
 We must treat the datacenter itself as one massive warehouse-scale computer (WSC) 
-<small>Luiz André Barroso, Urs Hölzle Datacenter, The Data Center as a Computer</small>
+<small>Luiz André Barroso, Urs Hölzle - Datacenter, The Data Center as a Computer</small>
 				</section>
 
-				<section>
-					Running kubernetes on VMs is wasteful
-				</section>
 
 				<section>
 					Kubernetes is the kernel of the datacenter
@@ -187,7 +197,14 @@ Borgmaster was originally designed as a monolithic system, but over time, it bec
 				</section>
 
 				<section>
+					Go is a movement. 
+				</section>
+
+				<section>
+					<p>slack:@mohan</p>
 					<p>@extrasaltorg</p>
+					<p><small>github.com/extrasalt</small></p>				
+					<p><small>extrasalt.org</small></p>
 					<p>Thank you. </p>
 
 				</section>
